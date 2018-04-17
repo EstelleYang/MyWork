@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_titlebar"
+    >
+    <ImageView
+        android:id="@+id/back_hos"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:src="@drawable/back1"
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/toolbar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginLeft="118dp"
+        android:text="肿瘤医院"
+
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"/>
+
+
+
+</LinearLayout>

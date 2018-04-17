@@ -1,0 +1,161 @@
+<!-- 用户登录 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/milkYellow"
+    android:orientation="vertical"
+    tools:context=".act.UserLoginActivity">
+    <!-- 标题 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/title_top1">
+        <include layout="@layout/home_top_title1"/>
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/title_login_point"
+        android:layout_width="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <!-- 灰色分割线 手机号码 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_Gray"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_login1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_White"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/enter_phone_number"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|right"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/loginphone"
+            android:inputType="phone"
+            android:hint="请输入身份证号码"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:background="@null"/>
+
+
+    </LinearLayout>
+
+    <!-- 灰色分割线 密码-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_Gray"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_login2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_White"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/enter_pwd_number"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|right"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/loginpwd"
+            android:numeric="integer"
+            android:hint="@string/enter_pwd_regular"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:background="@null"/>
+
+
+    </LinearLayout>
+
+    <!-- 灰色分割线 确认-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_Gray"/>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="getUserLoginBtnClick"
+            android:src="@drawable/qr"/>
+
+        <TextView
+            android:id="@+id/tv_findPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_activity_find_pwd"
+            android:textColor="@color/app_pri_color"
+            android:layout_marginLeft="25dp"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:onClick="getFindPwdBtnClick"
+            android:layout_gravity="left|bottom"/>
+
+        <TextView
+            android:id="@+id/tv_userRegi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_activity_sms_identifying_code"
+            android:textColor="@color/app_pri_color"
+            android:layout_marginRight="25dp"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:onClick="getUserRegiBtnClick"
+            android:layout_gravity="right|bottom" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title_activity_login_code"
+            android:textColor="@color/white"
+            android:textSize="18dip"
+            android:gravity="center"/>
+    </FrameLayout>
+
+</LinearLayout>
