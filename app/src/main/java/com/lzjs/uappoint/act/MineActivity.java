@@ -183,12 +183,12 @@ public class MineActivity extends Activity implements View.OnClickListener {
      * 我的收藏 yangjing
      */
     public void setMyFavoriteBtnClick(View view){
-        if (isLogin()){
+     //   if (isLogin()){
             startActivity(new Intent(getBaseContext(),CollectionArticleListActivity.class));
-        }
-        else{
-            startActivity(new Intent(getBaseContext(), LoginActivity.class));
-        }
+     //   }
+      // else{
+           // startActivity(new Intent(getBaseContext(), LoginActivity.class));
+     //   }
 
     }
 

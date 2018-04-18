@@ -143,6 +143,7 @@
         <activity android:name=".fresco.ui.GifActivity" />
         <activity android:name=".fresco.ui.CustomGifViewActivity" />
         <activity android:name=".act.CollectionArticleListActivity"/>
+        <activity android:name=".act.CollectedArticleDetailActivity"/>
 
     </application>
 

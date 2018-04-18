@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 
 import com.lzjs.uappoint.R;
 import com.lzjs.uappoint.bean.Article;
+import com.lzjs.uappoint.bean.CollecteArticle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +88,7 @@ public abstract class CollectionArticleAdapter<T> extends RecyclerView.Adapter<C
                 }
             });
         }
-        Article article = (Article)mObjects.get(position);
+        CollecteArticle article = (CollecteArticle) mObjects.get(position);
         holder.articleTitle.setText(article.getTital());
         /**
          * 之后日期修改为收藏时间

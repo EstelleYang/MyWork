@@ -39,12 +39,13 @@ public class AcceptAmountActivity extends BaseActivity implements PullToRefreshV
     private TextView hosInner,hosOuter;
     private ListView listView;
     private ArrayAdapter dateAdapter;
-    private ImageView backHos;
     private int flagTimeChoose = 0;
     //接收接诊量信息
     private List<DoctorAcceptAmount> doctorAcceptAmountList = new ArrayList<>();
     private static final String TAG = "AcceptAmountActivity";
     private AcceptAmountAdapter acceptAmountAdapter;
+    private Toolbar toolbar;
+    private TextView textView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: start****************************************************");
@@ -56,14 +57,19 @@ public class AcceptAmountActivity extends BaseActivity implements PullToRefreshV
         }
         Resources resource = getBaseContext().getResources();
         Log.d(TAG, "onCreate: *******************"+resource);
-
-        backHos = (ImageView)findViewById(R.id.back_hos);
-        backHos.setOnClickListener(new View.OnClickListener() {
+        toolbar =(Toolbar)findViewById(R.id.accept_amount_toolbar) ;
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AcceptAmountActivity.this.finish();
+                finish();
             }
         });
+        textView = (TextView)findViewById(R.id.toolbar_name) ;
+        textView.setText("肿瘤医院");
+        textView.setTextSize(18);
+
         //接诊量数据展示列表
         initAccAmount();
         //院内院外选择

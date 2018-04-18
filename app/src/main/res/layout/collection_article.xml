@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/subscribe_item_normal_stroke">
-    <include layout="@layout/title_bar"/>
+    <include layout="@layout/toolbar_pacs"
+        android:id="@+id/colArticleTitle"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_view_view"
         android:layout_width="match_parent"

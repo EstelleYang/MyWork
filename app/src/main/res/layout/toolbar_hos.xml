@@ -20,7 +20,7 @@
         android:id="@+id/toolbar_name"
         android:layout_width="wrap_content"
         android:layout_height="56dp"
-        android:layout_marginLeft="118dp"
+        android:layout_marginLeft="110dp"
         android:text="肿瘤医院"
 
         android:textColor="#fff"
